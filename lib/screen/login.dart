@@ -1,5 +1,6 @@
 import 'package:bopool/screen/login_gender.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -14,17 +15,25 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 190),
-              const Column(
+              Column(
                 children: [
-                  Text(
-                    "밥풀",
-                    style: TextStyle(
-                      fontSize: 60,
-                      color: Color.fromARGB(255, 255, 136, 0),
-                      fontFamily: 'KCC-Ganpan',
-                    ),
+                  SvgPicture.asset(
+                    'assets/images/text_logo.svg',
+                    width: 75,
+                    height: 60,
                   ),
-                  Text(
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  // const Text(
+                  //   "밥풀",
+                  //   style: TextStyle(
+                  //     fontSize: 60,
+                  //     color: Color.fromARGB(255, 255, 136, 0),
+                  //     fontFamily: 'KCC-Ganpan',
+                  //   ),
+                  // ),
+                  const Text(
                     "우리 가족 식사 담당 서비스, 밥풀",
                     style: TextStyle(
                       fontSize: 20,
@@ -36,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 211,
+                height: 240,
               ),
               GestureDetector(
                 onTap: () {
