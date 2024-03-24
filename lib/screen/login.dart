@@ -21,6 +21,7 @@ class LoginScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 60,
                       color: Color.fromARGB(255, 255, 136, 0),
+                      fontFamily: 'KCC-Ganpan',
                     ),
                   ),
                   Text(
@@ -28,6 +29,8 @@ class LoginScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       color: Color.fromARGB(255, 255, 191, 113),
+                      fontFamily: 'SUITE',
+                      fontWeight: FontWeight.w700,
                     ),
                   )
                 ],
@@ -54,7 +57,12 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       Text(
                         "카카오 로그인",
-                        style: TextStyle(color: Colors.black, fontSize: 16),
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontFamily: 'SUITE',
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ],
                   ),
@@ -82,7 +90,12 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       Text(
                         "Apple 로그인",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'SUITE',
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ],
                   ),
@@ -91,11 +104,30 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 33,
               ),
-              const Text(
-                "회원가입 시 서비스 이용약관과\n개인정보 수집 및 이용에 동의하게 됩니다",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Color.fromARGB(255, 129, 129, 129)),
-              )
+              const Text.rich(
+                  textAlign: TextAlign.center,
+                  TextSpan(
+                    text: "회원가입 시 ",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 129, 129, 129),
+                      fontFamily: 'SUITE',
+                      fontWeight: FontWeight.w500,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: '서비스 이용약관',
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                      TextSpan(text: "과\n"),
+                      TextSpan(
+                        text: "개인정보 수집 및 이용",
+                        style: TextStyle(decoration: TextDecoration.underline),
+                      ),
+                      TextSpan(text: "에 동의하게 됩니다.")
+                    ],
+                  ))
             ],
           ),
         ),
